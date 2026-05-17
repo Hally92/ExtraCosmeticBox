@@ -84,6 +84,12 @@ if not exist "$(ProjectDir)bin\Export" mkdir "$(ProjectDir)bin\Export"
 copy "$(TargetPath)" "$(ProjectDir)bin\Export\"
 
 :: Assetsフォルダの中身を丸ごとExportフォルダにコピー（上書き許可、静かに実行）
-xcopy "$(ProjectDir)Assets\*.*" "$(ProjectDir)bin\Export\" /Y /E /I</PostBuildEvent>
+xcopy "$(ProjectDir)Assets\*.*" "$(ProjectDir)bin\Export\" /Y /E /I
+
+:: 以前に作った古いZIPがあれば一度削除（エラー防止）
+if exist "$(ProjectDir)bin\Export\$(ProjectName).zip" del "$(ProjectDir)bin\Export\$(ProjectName).zip"
+
+:: Exportフォルダの中身（DLLやmanifestなど）を丸ごとZIPに圧縮
+tar -caf "$(ProjectDir)bin\Export\$(ProjectName).zip" -C "$(ProjectDir)bin\Export" .</PostBuildEvent>
   </PropertyGroup>
 </Project>
