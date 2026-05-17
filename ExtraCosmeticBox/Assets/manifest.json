@@ -1,0 +1,11 @@
+{
+  "name": "ExtraCosmeticBox",
+  "version_number": "1.0.6",
+  "website_url": "https://thunderstore.io/c/repo/",
+  "description": "衣装ボックスの抽選回数を0~10回加算します / Adds configurable extra cosmetic box roll attempts.",
+  "dependencies": [
+    "BepInEx-BepInExPack-5.4.2305",
+    "nickklmao-MenuLib-2.5.3",
+    "nickklmao-REPOConfig-1.2.6"
+  ]
+}
