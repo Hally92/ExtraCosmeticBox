@@ -4,7 +4,7 @@ using HarmonyLib;
 
 namespace ExtraCosmeticBoxMod
 {
-    [BepInPlugin("com.HalHally.extra_cosmeticbox", "Extra Cosmetic Box", "1.0.6")]
+    [BepInPlugin("com.HalHally.extra_cosmeticbox", "Extra Cosmetic Box", "1.0.7")]
     [BepInDependency("REPOLib", BepInDependency.DependencyFlags.SoftDependency)]
     public class ExtraCosmeticBoxPlugin : BaseUnityPlugin
     {

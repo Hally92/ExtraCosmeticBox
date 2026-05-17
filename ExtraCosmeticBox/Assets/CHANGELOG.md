@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.7
+- Moved repository to GitHub (Public Open Source)
+- GitHubリポジトリを公開（オープンソース化）
+
 ## 1.0.6
 - Fixed patch not applying when loaded alongside REPOLib or other mods
 - Reverted PatchAll() to no-argument form to resolve BepInEx assembly resolution issue
