@@ -40,6 +40,9 @@
     <Reference Include="BepInEx">
       <HintPath>..\..\..\..\..\AppData\Roaming\r2modmanPlus-local\REPO\profiles\Default\BepInEx\core\BepInEx.dll</HintPath>
     </Reference>
+    <Reference Include="PhotonUnityNetworking">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\REPO\REPO_Data\Managed\PhotonUnityNetworking.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -76,20 +79,4 @@
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PostBuildEvent>:: Exportフォルダをbin直下に作成（すでにある場合はスルー）
-if not exist "$(ProjectDir)bin\Export" mkdir "$(ProjectDir)bin\Export"
-
-:: 自分のDLLをExportフォルダにコピー
-copy "$(TargetPath)" "$(ProjectDir)bin\Export\"
-
-:: Assetsフォルダの中身を丸ごとExportフォルダにコピー（上書き許可、静かに実行）
-xcopy "$(ProjectDir)Assets\*.*" "$(ProjectDir)bin\Export\" /Y /E /I
-
-:: 以前に作った古いZIPがあれば一度削除（エラー防止）
-if exist "$(ProjectDir)bin\Export\$(ProjectName).zip" del "$(ProjectDir)bin\Export\$(ProjectName).zip"
-
-:: Exportフォルダの中身（DLLやmanifestなど）を丸ごとZIPに圧縮
-tar -caf "$(ProjectDir)bin\Export\$(ProjectName).zip" -C "$(ProjectDir)bin\Export" .</PostBuildEvent>
-  </PropertyGroup>
 </Project>

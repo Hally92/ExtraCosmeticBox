@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.0
+- Fixed issue where guests could not correctly count multiple cosmetic boxes in multiplayer
+- マルチプレイ時にゲスト側で複数のコスメボックスが正常にカウントされない問題を修正
+
 ## 1.0.7
 - Moved repository to GitHub (Public Open Source)
 - GitHubリポジトリを公開（オープンソース化）

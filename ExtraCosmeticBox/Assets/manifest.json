@@ -1,6 +1,6 @@
 {
     "name": "ExtraCosmeticBox",
-    "version_number": "1.0.7",
+    "version_number": "1.1.0",
     "website_url": "https://github.com/Hally92/ExtraCosmeticBox",
     "description": "衣装ボックスの抽選回数を0~10回加算します / Adds configurable extra cosmetic box roll attempts.",
     "dependencies": [

@@ -52,11 +52,13 @@ This mod supports in-game configuration through REPOConfig.
 
 ## Multiplayer / マルチプレイ
 
-Host-side compatible.
-Clients are recommended to install the mod as well.
+**All players are recommended to install this mod.**
+If a guest does not have the mod installed, cosmetic box counting may be unstable on their end.
+The number of cosmetic boxes that spawn is determined by the host's setting.
 
-ホストのみでも動作します。
-ただし、クライアント側にも導入推奨です。
+**全員の導入を推奨します。**
+ゲスト側がMODを導入していない場合、コスメボックスの納品カウントが正常に行われない可能性があります。
+コスメボックスのスポーン数はホスト側の設定値によって決まります。
 
 ---
 
